@@ -1,0 +1,15 @@
+import Pokemon from "@/app/(pokemon)";
+import { configureStore } from "@reduxjs/toolkit";
+
+const store = configureStore({
+  reducer: {
+    Pokemon,
+  },
+});
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
+
+export default store;
+
+console.log(store.getState());
