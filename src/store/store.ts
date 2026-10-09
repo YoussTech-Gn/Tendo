@@ -1,9 +1,9 @@
-import Pokemon from "@/app/(pokemon)";
+import pokemon from "@/store/pokemon/getPokemons";
 import { configureStore } from "@reduxjs/toolkit";
 
 const store = configureStore({
   reducer: {
-    Pokemon,
+    pokemon,
   },
 });
 
@@ -12,4 +12,4 @@ export type AppDispatch = typeof store.dispatch;
 
 export default store;
 
-console.log(store.getState());
+// console.log(store.getState());
